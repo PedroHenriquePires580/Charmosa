@@ -1,0 +1,6 @@
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Application\bin\Debug\CharmosaApp.Application.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Application\bin\Debug\CharmosaApp.Application.pdb
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Application\obj\Debug\CharmosaApp.Application.csprojAssemblyReference.cache
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Application\obj\Debug\CharmosaApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Application\obj\Debug\CharmosaApp.Application.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Application\obj\Debug\CharmosaApp.Application.pdb
