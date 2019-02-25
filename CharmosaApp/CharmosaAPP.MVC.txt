@@ -1,0 +1,2 @@
+aqui devera ser criado a aplicação MVC do .net core,
+sem autenticação
