@@ -1,0 +1,16 @@
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaApp.Infra.Data.dll.config
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaApp.Infra.Data.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaApp.Infra.Data.pdb
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaAPP.Domain.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaAPP.Domain.pdb
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.csprojAssemblyReference.cache
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.csproj.CopyComplete
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.pdb
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.Migrations.estruturaBanco.resources
+C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.csproj.GenerateResource.cache
