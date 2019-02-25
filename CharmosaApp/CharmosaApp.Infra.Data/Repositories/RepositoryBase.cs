@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,11 +12,7 @@ namespace CharmosaApp.Infra.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
-        protected CharmosaAppContext dbContext;
-        public RepositoryBase(CharmosaAppContext charmosaAppContext)
-        {
-            dbContext = charmosaAppContext;
-        }
+        protected CharmosaAppContext dbContext = new CharmosaAppContext();
 
         public void Add(TEntity obj)
         {
@@ -46,6 +43,13 @@ namespace CharmosaApp.Infra.Data.Repositories
         public void Dispose()
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<TEntity> SearchFor(Expression<Func<TEntity, bool>> predicate)
+        {
+            return dbContext.Set<TEntity>()
+                .Where(predicate)
+                ?.ToList();
         }
     }
 }

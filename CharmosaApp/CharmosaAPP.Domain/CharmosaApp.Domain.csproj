@@ -33,11 +33,13 @@
   <ItemGroup>
     <Compile Include="Entities\Administrador.cs" />
     <Compile Include="Entities\Funcionario.cs" />
-    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Entities\Base\Usuario.cs" />
+    <Compile Include="Interfaces\IAdministradorRepository.cs" />
+    <Compile Include="Interfaces\IFuncionarioRepository.cs" />
+    <Compile Include="Interfaces\IRepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,6 +17,13 @@ namespace CharmosaApp.Infra.Data.EntityConfig
         {
             HasKey(f => f.FuncionarioID);
 
+            Property(f => f.Nome)
+                .IsRequired();
+            Property(f => f.Sobrenome)
+                .IsRequired();
+            Property(f => f.Salario)
+                .IsRequired();
+
             ToTable("TB_FUNCIONARIO");
         }
     }
