@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CharmosaAPP.Domain\CharmosaApp.Domain.csproj" />
+    <ProjectReference Include="..\CharmosaApp.Infra.Data\CharmosaApp.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

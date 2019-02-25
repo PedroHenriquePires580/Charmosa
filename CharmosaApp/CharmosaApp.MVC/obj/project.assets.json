@@ -4650,6 +4650,18 @@
         "runtime": {
           "bin/placeholder/CharmosaApp.Domain.dll": {}
         }
+      },
+      "CharmosaApp.Infra.Data/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "CharmosaApp.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CharmosaApp.Infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CharmosaApp.Infra.Data.dll": {}
+        }
       }
     }
   },
@@ -12590,6 +12602,11 @@
       "type": "project",
       "path": "../CharmosaAPP.Domain/CharmosaApp.Domain.csproj",
       "msbuildProject": "../CharmosaAPP.Domain/CharmosaApp.Domain.csproj"
+    },
+    "CharmosaApp.Infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../CharmosaApp.Infra.Data/CharmosaApp.Infra.Data.csproj",
+      "msbuildProject": "../CharmosaApp.Infra.Data/CharmosaApp.Infra.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12597,6 +12614,7 @@
       "AutoMapper >= 8.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.0.0",
       "CharmosaApp.Domain >= 1.0.0",
+      "CharmosaApp.Infra.Data >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -12635,6 +12653,9 @@
           "projectReferences": {
             "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj": {
               "projectPath": "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj"
+            },
+            "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Infra.Data\\CharmosaApp.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Infra.Data\\CharmosaApp.Infra.Data.csproj"
             }
           }
         }
