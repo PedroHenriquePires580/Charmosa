@@ -4,3 +4,9 @@ C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaAPP.Domain
 C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.csproj.CoreCompileInputs.cache
 C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.dll
 C:\Users\pedro.henrique\Desktop\Charmosa\Charmosa\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.pdb
+C:\Users\pedro.henrique\Desktop\Charmosa\CharmosaApp\CharmosaAPP.Domain\bin\Debug\CharmosaAPP.Domain.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\CharmosaApp\CharmosaAPP.Domain\bin\Debug\CharmosaAPP.Domain.pdb
+C:\Users\pedro.henrique\Desktop\Charmosa\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaApp.Domain.csprojAssemblyReference.cache
+C:\Users\pedro.henrique\Desktop\Charmosa\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\pedro.henrique\Desktop\Charmosa\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.dll
+C:\Users\pedro.henrique\Desktop\Charmosa\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.pdb
