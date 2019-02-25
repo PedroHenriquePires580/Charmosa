@@ -52,6 +52,19 @@ namespace CharmosaApp.Infra.Data.Contexto
                 );
 
             /// <summary>
+            /// Configurando algumas propriedades da classe base e Usuario
+            /// </summary>
+            modelBuilder.Properties()
+                .Where(x => x.Name == "LogInInclusao")
+                .Configure(
+                    x => x.IsRequired()
+                    );
+            modelBuilder.Properties()
+                .Where(x => x.Name == "UsuarioCodFuncao")
+                .Configure(
+                    x => x.IsRequired()
+                    );
+            /// <summary>
             /// Adicionando as referencias de configuração do EntityConfig
             /// </summary>
             modelBuilder.Configurations.Add(new AdministradorConfiguration());
@@ -71,6 +84,7 @@ namespace CharmosaApp.Infra.Data.Contexto
                 if (entry.State == EntityState.Added)
                 {
                     entry.Property("DataCadastro").CurrentValue = DateTime.Now;
+                    entry.Property("RegistroAtivo").CurrentValue = true;
                 }
                 if(entry.State == EntityState.Modified)
                 {

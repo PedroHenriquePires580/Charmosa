@@ -32,6 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Entities\Administrador.cs" />
+    <Compile Include="Entities\Base\ClasseBase.cs" />
+    <Compile Include="Entities\Enumeradores\UsuarioFuncao.cs" />
     <Compile Include="Entities\Funcionario.cs" />
     <Compile Include="Entities\Base\Usuario.cs" />
     <Compile Include="Interfaces\IAdministradorRepository.cs" />
