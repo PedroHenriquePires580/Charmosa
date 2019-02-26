@@ -350,3 +350,7 @@ C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\obj\De
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.csproj.CopyComplete
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.dll
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\obj\Debug\CharmosaApp.Infra.Data.pdb
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Security.AccessControl.dll
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Security.Permissions.dll
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Security.Principal.Windows.dll

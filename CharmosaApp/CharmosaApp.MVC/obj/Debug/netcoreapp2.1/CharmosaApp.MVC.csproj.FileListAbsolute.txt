@@ -41,6 +41,12 @@ C:\Users\administrator\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netc
 C:\Users\administrator\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.csproj.CopyComplete
 C:\Users\administrator\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.dll
 C:\Users\administrator\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.pdb
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.csprojAssemblyReference.cache
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.csproj.CoreCompileInputs.cache
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorAssemblyInfo.cache
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorAssemblyInfo.cs
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.AssemblyInfoInputs.cache
+C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.AssemblyInfo.cs
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.deps.json
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.runtimeconfig.json
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.runtimeconfig.dev.json
@@ -57,12 +63,6 @@ C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\bin\Debug\net
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.Infra.Data.pdb
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.Infra.Data.dll.config
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\EntityFramework.xml
-C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.csprojAssemblyReference.cache
-C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.csproj.CoreCompileInputs.cache
-C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorAssemblyInfo.cache
-C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorAssemblyInfo.cs
-C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.AssemblyInfoInputs.cache
-C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.AssemblyInfo.cs
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.TagHelpers.input.cache
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.TagHelpers.output.cache
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorCoreGenerate.cache
