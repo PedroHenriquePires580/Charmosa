@@ -135,6 +135,8 @@
     <Compile Include="Repositories\AdministradorRepository.cs" />
     <Compile Include="Repositories\FuncionarioRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CharmosaAPP.Domain\CharmosaApp.Domain.csproj">

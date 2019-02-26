@@ -1,4 +1,5 @@
-﻿using CharmosaAPP.Domain.Entities;
+﻿using CharmosaApp.Infra.Data.Contexto;
+using CharmosaAPP.Domain.Entities;
 using CharmosaAPP.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,10 @@ namespace CharmosaApp.Infra.Data.Repositories
 {
     public class AdministradorRepository : RepositoryBase<Administrador>, IAdministradorRepository
     {
-       
+        public AdministradorRepository(CharmosaAppContext dbContext)
+            :base(dbContext)
+        {
+
+        }
     }
 }

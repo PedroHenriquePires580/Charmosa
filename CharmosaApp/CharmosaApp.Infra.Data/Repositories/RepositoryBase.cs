@@ -12,12 +12,16 @@ namespace CharmosaApp.Infra.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
-        protected CharmosaAppContext dbContext = new CharmosaAppContext();
+        protected CharmosaAppContext dbContext;
+
+        public RepositoryBase(CharmosaAppContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
 
         public void Add(TEntity obj)
         {
             dbContext.Set<TEntity>().Add(obj);
-            dbContext.SaveChanges();
         }
 
         public IEnumerable<TEntity> GetAll()
@@ -33,7 +37,6 @@ namespace CharmosaApp.Infra.Data.Repositories
         public void Remove(TEntity obj)
         {
             dbContext.Set<TEntity>().Remove(obj);
-            dbContext.SaveChanges();
         }
 
         public void Update(TEntity obj)

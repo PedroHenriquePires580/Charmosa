@@ -6,6 +6,7 @@ using AutoMapper;
 using CharmosaApp.Application;
 using CharmosaApp.Application.Interfaces;
 using CharmosaApp.Infra.Data.Repositories;
+using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaAPP.Domain.Interfaces;
 using CharmosaAPP.Domain.Interfaces.Services;
 using CharmosaAPP.Domain.Services;
@@ -50,6 +51,7 @@ namespace CharmosaApp.MVC
             services.AddScoped(typeof(IAppServiceBase<>), typeof(AppServiceBase<>));
             services.AddScoped<IAdministradorAppService, AdministradorAppService>();
             services.AddScoped<IFuncionarioAppService, FuncionarioAppService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
             services.AddAutoMapper();

@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CharmosaApp.Application;
+using CharmosaApp.Application.Interfaces;
+using CharmosaApp.Infra.Data.Contexto;
+using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaApp.MVC.ViewModels;
+using CharmosaAPP.Domain.Entities;
+using CharmosaAPP.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CharmosaApp.MVC.Controllers
 {
@@ -35,11 +42,14 @@ namespace CharmosaApp.MVC.Controllers
             try
             {
                 // TODO: Add insert logic here
+                CharmosaAppContext dbContext = new CharmosaAppContext();
+                //unitOfWork.AdministradorRepository.Add(new Administrador());
 
-                return RedirectToAction(nameof(Index));
+                return View();
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return View();
             }
         }
