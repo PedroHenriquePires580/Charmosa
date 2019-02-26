@@ -1,6 +1,7 @@
 ﻿using CharmosaApp.Application.Interfaces;
+using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaAPP.Domain.Entities;
-using CharmosaAPP.Domain.Interfaces.Services;
+using CharmosaAPP.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,12 @@ namespace CharmosaApp.Application
 {
     public class FuncionarioAppService : AppServiceBase<Funcionario>, IFuncionarioAppService
     {
-        private readonly IFuncionarioService _funcionarioService;
+        public readonly UnitOfWork<Funcionario> _funcionarioUnitOfWork;
 
-        public FuncionarioAppService(IFuncionarioService funcionarioService)
-            :base(funcionarioService)
+        public FuncionarioAppService(UnitOfWork<Funcionario> funcionarioUnitOfWork)
+            :base(funcionarioUnitOfWork)
         {
-            _funcionarioService = funcionarioService;
+            _funcionarioUnitOfWork = funcionarioUnitOfWork;
         }
     }
 }

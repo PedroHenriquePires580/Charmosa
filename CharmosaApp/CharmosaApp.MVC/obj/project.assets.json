@@ -4673,7 +4673,8 @@
       "CharmosaApp.Application/1.0.0": {
         "type": "project",
         "dependencies": {
-          "CharmosaApp.Domain": "1.0.0"
+          "CharmosaApp.Domain": "1.0.0",
+          "CharmosaApp.Infra.Data": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CharmosaApp.Application.dll": {}

@@ -8,7 +8,6 @@ using CharmosaApp.Infra.Data.Contexto;
 using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaApp.MVC.ViewModels;
 using CharmosaAPP.Domain.Entities;
-using CharmosaAPP.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -43,6 +42,9 @@ namespace CharmosaApp.MVC.Controllers
             {
                 // TODO: Add insert logic here
                 CharmosaAppContext dbContext = new CharmosaAppContext();
+                AdministradorAppService appService = 
+                    new AdministradorAppService(new UnitOfWork<Administrador>(dbContext));
+                appService._administradorUnitOfWork.AdministradorRepository.Add(new Administrador());
                 //unitOfWork.AdministradorRepository.Add(new Administrador());
 
                 return View();

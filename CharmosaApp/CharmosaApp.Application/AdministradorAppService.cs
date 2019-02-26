@@ -1,6 +1,7 @@
 ﻿using CharmosaApp.Application.Interfaces;
+using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaAPP.Domain.Entities;
-using CharmosaAPP.Domain.Interfaces.Services;
+using CharmosaAPP.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,12 @@ namespace CharmosaApp.Application
 {
     public class AdministradorAppService : AppServiceBase<Administrador>,IAdministradorAppService
     {
-        private  readonly IAdministradorService _administradorService;
+        public  readonly UnitOfWork<Administrador> _administradorUnitOfWork;
 
-        public AdministradorAppService(IAdministradorService administradorService)
-            :base(administradorService)
+        public AdministradorAppService(UnitOfWork<Administrador> administradorUnitOfWork)
+            :base(administradorUnitOfWork)
         {
-            _administradorService = administradorService;
+            _administradorUnitOfWork = administradorUnitOfWork;
         }
     }
 }

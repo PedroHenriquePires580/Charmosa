@@ -9,8 +9,7 @@ using CharmosaApp.Infra.Data.Contexto;
 using CharmosaApp.Infra.Data.Repositories;
 using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaAPP.Domain.Interfaces;
-using CharmosaAPP.Domain.Interfaces.Services;
-using CharmosaAPP.Domain.Services;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -47,13 +46,10 @@ namespace CharmosaApp.MVC
             services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             services.AddScoped<IAdministradorRepository, AdministradorRepository>();
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
-            services.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
-            services.AddScoped<IAdministradorService, AdministradorService>();
-            services.AddScoped<IFuncionarioService, FuncionarioService>();
             services.AddScoped(typeof(IAppServiceBase<>), typeof(AppServiceBase<>));
             services.AddScoped<IAdministradorAppService, AdministradorAppService>();
             services.AddScoped<IFuncionarioAppService, FuncionarioAppService>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 
 
             services.AddAutoMapper();
