@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using CharmosaApp.Application;
+using CharmosaApp.Application.Interfaces;
 using CharmosaApp.Infra.Data.Repositories;
 using CharmosaAPP.Domain.Interfaces;
+using CharmosaAPP.Domain.Interfaces.Services;
+using CharmosaAPP.Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -37,8 +41,15 @@ namespace CharmosaApp.MVC
             /// <summary>
             /// Adicionando injeção de dependência
             /// </summary>
-            services.AddScoped<IAdministradorRepository,AdministradorRepository>();
+            services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
+            services.AddScoped<IAdministradorRepository, AdministradorRepository>();
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+            services.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
+            services.AddScoped<IAdministradorService, AdministradorService>();
+            services.AddScoped<IFuncionarioService, FuncionarioService>();
+            services.AddScoped(typeof(IAppServiceBase<>), typeof(AppServiceBase<>));
+            services.AddScoped<IAdministradorAppService, AdministradorAppService>();
+            services.AddScoped<IFuncionarioAppService, FuncionarioAppService>();
 
 
             services.AddAutoMapper();
@@ -64,7 +75,12 @@ namespace CharmosaApp.MVC
             app.UseCookiePolicy();
 
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

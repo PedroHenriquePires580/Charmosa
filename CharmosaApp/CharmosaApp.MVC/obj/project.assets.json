@@ -4642,6 +4642,18 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "CharmosaApp.Application/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "CharmosaApp.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CharmosaApp.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CharmosaApp.Application.dll": {}
+        }
+      },
       "CharmosaApp.Domain/1.0.0": {
         "type": "project",
         "compile": {
@@ -12598,6 +12610,11 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "CharmosaApp.Application/1.0.0": {
+      "type": "project",
+      "path": "../CharmosaApp.Application/CharmosaApp.Application.csproj",
+      "msbuildProject": "../CharmosaApp.Application/CharmosaApp.Application.csproj"
+    },
     "CharmosaApp.Domain/1.0.0": {
       "type": "project",
       "path": "../CharmosaAPP.Domain/CharmosaApp.Domain.csproj",
@@ -12613,6 +12630,7 @@
     ".NETCoreApp,Version=v2.1": [
       "AutoMapper >= 8.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.0.0",
+      "CharmosaApp.Application >= 1.0.0",
       "CharmosaApp.Domain >= 1.0.0",
       "CharmosaApp.Infra.Data >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
@@ -12651,6 +12669,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Application\\CharmosaApp.Application.csproj": {
+              "projectPath": "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Application\\CharmosaApp.Application.csproj"
+            },
             "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj": {
               "projectPath": "C:\\Users\\administrator\\Desktop\\Estudo\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj"
             },

@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CharmosaApp.Application\CharmosaApp.Application.csproj" />
     <ProjectReference Include="..\CharmosaAPP.Domain\CharmosaApp.Domain.csproj" />
     <ProjectReference Include="..\CharmosaApp.Infra.Data\CharmosaApp.Infra.Data.csproj" />
   </ItemGroup>

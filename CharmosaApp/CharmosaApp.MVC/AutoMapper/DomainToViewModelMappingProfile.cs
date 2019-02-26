@@ -11,6 +11,11 @@ namespace CharmosaApp.MVC.AutoMapper
     public class DomainToViewModelMappingProfile : Profile
     {
 
+        public override string ProfileName
+        {
+            get { return "ViewModelToDomainMappingProfile"; }
+        }
+
         public DomainToViewModelMappingProfile()
         {
             CreateMap<Administrador, AdministradorViewModel>();

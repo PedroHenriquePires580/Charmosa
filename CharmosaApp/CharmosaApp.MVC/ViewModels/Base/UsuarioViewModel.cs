@@ -10,7 +10,8 @@ namespace CharmosaApp.MVC.ViewModels.Base
     public abstract class UsuarioViewModel
     {
         [DisplayName("Função")]
-        public string UsuarioCodFuncao { get; set; }
+        [Required(ErrorMessage = "O código de função é obrigatório")]
+        public int UsuarioCodFuncao { get; set; }
 
         [Required(ErrorMessage ="O campo Login é obrigatório")]
         [MaxLength(50, ErrorMessage = "O tamanho máximo é de {50} caracteres")]

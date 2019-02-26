@@ -26,7 +26,9 @@
         "dependencies": {
           "AutoMapper": "8.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0",
+          "CharmosaApp.Application": "1.0.0",
           "CharmosaApp.Domain": "1.0.0",
+          "CharmosaApp.Infra.Data": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
@@ -547,12 +549,43 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "CharmosaApp.Application/1.0.0": {
+        "dependencies": {
+          "CharmosaApp.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CharmosaApp.Application.dll": {}
+        },
+        "compile": {
+          "CharmosaApp.Application.dll": {}
+        }
+      },
       "CharmosaApp.Domain/1.0.0": {
         "runtime": {
           "CharmosaAPP.Domain.dll": {}
         },
         "compile": {
           "CharmosaAPP.Domain.dll": {}
+        }
+      },
+      "CharmosaApp.Infra.Data/1.0.0": {
+        "dependencies": {
+          "CharmosaApp.Domain": "1.0.0",
+          "EntityFramework": "6.0.0.0"
+        },
+        "runtime": {
+          "CharmosaApp.Infra.Data.dll": {}
+        },
+        "compile": {
+          "CharmosaApp.Infra.Data.dll": {}
+        }
+      },
+      "EntityFramework.Reference/6.0.0.0": {
+        "runtime": {
+          "EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          }
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3699,8 +3732,23 @@
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
     },
+    "CharmosaApp.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "CharmosaApp.Domain/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CharmosaApp.Infra.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityFramework.Reference/6.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
