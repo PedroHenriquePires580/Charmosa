@@ -56,7 +56,7 @@ namespace CharmosaApp.MVC
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<DbContext>(options =>
+            services.AddDbContext<CharmosaAppContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("CharmosaAppContext")));
         }
 

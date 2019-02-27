@@ -1,14 +1,14 @@
 ﻿using CharmosaAPP.Domain.Entities;
 using System;
-using System.Data.Entity;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using CharmosaApp.Infra.Data.EntityConfig;
 
 namespace CharmosaApp.Infra.Data.Contexto
 {
     public class CharmosaAppContext : DbContext
     {
-        public CharmosaAppContext() : base(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CharmosaApp;Integrated Security=True;Connect Timeout=30;")
+        public CharmosaAppContext(DbContextOptions<CharmosaAppContext> options) : base(options)
         {
 
         }
@@ -16,58 +16,19 @@ namespace CharmosaApp.Infra.Data.Contexto
         DbSet<Administrador> Administrador { get; set; }
         DbSet<Funcionario> Funcionario { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            /// <summary>
-            /// Configura as propriedades que tenham ID no final
-            /// como chave primaria.
-            /// </summary>
-            modelBuilder.Properties()
-                .Where(p => p.Name == p.ReflectedType.Name + "ID")
-                .Configure(p => p.IsKey());
-
-            /// <summary>
-            /// Configura as propriedades setadas como string para
-            /// varchar e tamanho máximo de 250
-            /// </summary>
-            modelBuilder.Properties<string>()
-                .Configure(p => p.HasColumnType("varchar"));
-            modelBuilder.Properties<string>()
-                .Configure(p => p.HasMaxLength(250));
-
-            /// <summary>
-            /// Configurando Login como obrigatório e tamanho máximo de 50  e senha 
-            /// com tamanho máximo de 30
-            /// </summary>
-            modelBuilder.Properties()
-                .Where(x => x.Name == "Login")
-                .Configure(
-                    x => x.IsRequired().HasMaxLength(50)
-                );
-            modelBuilder.Properties()
-                .Where(x => x.Name == "Senha")
-                .Configure(
-                    x => x.IsRequired().HasMaxLength(30)
-                );
-
-            /// <summary>
-            /// Configurando algumas propriedades da classe base e Usuario
-            /// </summary>
-            modelBuilder.Properties()
-                .Where(x => x.Name == "LogInInclusao")
-                .Configure(
-                    x => x.IsRequired()
-                    );
-            modelBuilder.Properties()
-                .Where(x => x.Name == "UsuarioCodFuncao")
-                .Configure(
-                    x => x.IsRequired()
-                    );
             /// <summary>
             /// Adicionando as referencias de configuração do EntityConfig
             /// </summary>
-            modelBuilder.Configurations.Add(new AdministradorConfiguration());
-            modelBuilder.Configurations.Add(new FuncionarioConfiguration());
+            modelBuilder.ApplyConfiguration(new AdministradorConfiguration());
+            modelBuilder.ApplyConfiguration(new FuncionarioConfiguration());
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("CharmosaAppContext");
+            base.OnConfiguring(optionsBuilder);
         }
 
 

@@ -22,3 +22,8 @@ C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaAPP.Domain\obj\Debug\
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaApp.Domain.csproj.CoreCompileInputs.cache
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.dll
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.pdb
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaAPP.Domain\bin\Debug\CharmosaAPP.Domain.dll
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaAPP.Domain\bin\Debug\CharmosaAPP.Domain.pdb
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.dll
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaAPP.Domain\obj\Debug\CharmosaAPP.Domain.pdb

@@ -1,23 +1,41 @@
 ﻿using CharmosaAPP.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CharmosaApp.Infra.Data.EntityConfig
 {
-    public class AdministradorConfiguration : EntityTypeConfiguration<Administrador>
+    public class AdministradorConfiguration : IEntityTypeConfiguration<Administrador>
     {
         /// <summary>
         /// Configuração da classe Administrador
         /// </summary>
-        public AdministradorConfiguration()
+        public void Configure(EntityTypeBuilder<Administrador> builder)
         {
-            HasKey(a => a.AdmistradorID);
+            builder.HasKey(a => a.AdmistradorID);
+            builder.ToTable("TB_ADMINISTRADOR");
 
-            ToTable("TB_ADMINISTRADOR");
+            builder.Property(a => a.LogInInclusao)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnType("varchar");
+
+            builder.Property(a => a.LogInAlteracao)
+                .HasMaxLength(50)
+                .HasColumnType("varchar");
+
+
+            builder.Property(a => a.UsuarioCodFuncao)
+                .IsRequired();
+
+            builder.Property(a => a.Login)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnType("varchar");
+
+            builder.Property(a => a.Senha)
+                .IsRequired()
+                .HasMaxLength(30)
+                .HasColumnType("varchar");
         }
     }
 }

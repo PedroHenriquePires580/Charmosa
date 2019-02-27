@@ -41,7 +41,7 @@ namespace CharmosaApp.MVC.Controllers
             try
             {
                 // TODO: Add insert logic here
-                CharmosaAppContext dbContext = new CharmosaAppContext();
+                CharmosaAppContext dbContext = new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>());
                 AdministradorAppService appService = 
                     new AdministradorAppService(new UnitOfWork<Administrador>(dbContext));
                 appService._administradorUnitOfWork.AdministradorRepository.Add(new Administrador());

@@ -2,7 +2,6 @@
 using CharmosaAPP.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -41,7 +40,8 @@ namespace CharmosaApp.Infra.Data.Repositories
 
         public void Update(TEntity obj)
         {
-            dbContext.Entry(obj).State = EntityState.Modified;
+            dbContext.Set<TEntity>().Update(obj);
+            //dbContext.Entry(obj).State = EntityState.Modified;
         }
         public void Dispose()
         {

@@ -1,30 +1,55 @@
 ﻿using CharmosaAPP.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CharmosaApp.Infra.Data.EntityConfig
 {
-    public class FuncionarioConfiguration : EntityTypeConfiguration<Funcionario>
+    public class FuncionarioConfiguration : IEntityTypeConfiguration<Funcionario>
     {
         /// <summary>
         /// Configuração da classe Funcionario
         /// </summary>
-        public FuncionarioConfiguration()
+        public void Configure(EntityTypeBuilder<Funcionario> builder)
         {
-            HasKey(f => f.FuncionarioID);
+            builder.HasKey(f => f.FuncionarioID);
 
-            Property(f => f.Nome)
-                .IsRequired();
-            Property(f => f.Sobrenome)
-                .IsRequired();
-            Property(f => f.Salario)
+            builder.Property(f => f.Nome)
+                .IsRequired()
+                .HasColumnType("varchar")
+                .HasMaxLength(250);
+
+            builder.Property(f => f.Sobrenome)
+                .IsRequired()
+                .HasColumnType("varchar")
+                .HasMaxLength(250);
+
+            builder.Property(f => f.Salario)
                 .IsRequired();
 
-            ToTable("TB_FUNCIONARIO");
+            builder.ToTable("TB_FUNCIONARIO");
+
+            builder.Property(f => f.LogInInclusao)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnType("varchar");
+
+            builder.Property(f => f.LogInAlteracao)
+                .HasMaxLength(50)
+                .HasColumnType("varchar");
+
+
+            builder.Property(f => f.UsuarioCodFuncao)
+                .IsRequired();
+
+            builder.Property(f => f.Login)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnType("varchar");
+
+            builder.Property(f => f.Senha)
+                .IsRequired()
+                .HasMaxLength(30)
+                .HasColumnType("varchar"); 
         }
     }
 }

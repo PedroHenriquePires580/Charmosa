@@ -603,22 +603,13 @@
       },
       "CharmosaApp.Infra.Data/1.0.0": {
         "dependencies": {
-          "CharmosaApp.Domain": "1.0.0",
-          "EntityFramework": "6.0.0.0"
+          "CharmosaApp.Domain": "1.0.0"
         },
         "runtime": {
           "CharmosaApp.Infra.Data.dll": {}
         },
         "compile": {
           "CharmosaApp.Infra.Data.dll": {}
-        }
-      },
-      "EntityFramework.Reference/6.0.0.0": {
-        "runtime": {
-          "EntityFramework.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.2.61023.0"
-          }
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3791,11 +3782,6 @@
     },
     "CharmosaApp.Infra.Data/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "EntityFramework.Reference/6.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

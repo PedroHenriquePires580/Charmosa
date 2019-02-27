@@ -12738,11 +12738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.MVC\\CharmosaApp.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaApp.MVC\\CharmosaApp.MVC.csproj",
       "projectName": "CharmosaApp.MVC",
-      "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.MVC\\CharmosaApp.MVC.csproj",
+      "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaApp.MVC\\CharmosaApp.MVC.csproj",
       "packagesPath": "C:\\Users\\pedro.henrique\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.MVC\\obj\\",
+      "outputPath": "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaApp.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12761,14 +12761,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Application\\CharmosaApp.Application.csproj": {
-              "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Application\\CharmosaApp.Application.csproj"
+            "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaApp.Application\\CharmosaApp.Application.csproj": {
+              "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaApp.Application\\CharmosaApp.Application.csproj"
             },
-            "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj": {
-              "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj"
+            "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj": {
+              "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaAPP.Domain\\CharmosaApp.Domain.csproj"
             },
-            "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Infra.Data\\CharmosaApp.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\Estudo\\CharmosaApp\\CharmosaApp.Infra.Data\\CharmosaApp.Infra.Data.csproj"
+            "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaApp.Infra.Data\\CharmosaApp.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\pedro.henrique\\Desktop\\CharmosaApp\\CharmosaApp\\CharmosaApp.Infra.Data\\CharmosaApp.Infra.Data.csproj"
             }
           }
         }
