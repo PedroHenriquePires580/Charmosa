@@ -23,6 +23,7 @@ namespace CharmosaApp.MVC
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+  
         }
 
         public IConfiguration Configuration { get; }
@@ -59,8 +60,10 @@ namespace CharmosaApp.MVC
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<CharmosaAppContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("CharmosaAppContext"),
-                    builder => builder.MigrationsAssembly(typeof(Startup).Assembly.FullName)));
+                    options.UseSqlServer(Configuration.GetConnectionString("CharmosaCon"),
+                    builder => builder.MigrationsAssembly(typeof(Startup).Assembly.FullName))
+                    );
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

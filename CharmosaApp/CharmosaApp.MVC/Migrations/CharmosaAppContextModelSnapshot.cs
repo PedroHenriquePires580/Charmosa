@@ -30,13 +30,11 @@ namespace CharmosaApp.MVC.Migrations
                     b.Property<DateTime>("DataCadastro");
 
                     b.Property<string>("LogInAlteracao")
-                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 64)))
                         .HasColumnType("varchar")
                         .HasMaxLength(50);
 
                     b.Property<string>("LogInInclusao")
                         .IsRequired()
-                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 64)))
                         .HasColumnType("varchar")
                         .HasMaxLength(50);
 
@@ -70,13 +68,11 @@ namespace CharmosaApp.MVC.Migrations
                     b.Property<DateTime>("DataCadastro");
 
                     b.Property<string>("LogInAlteracao")
-                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 64)))
                         .HasColumnType("varchar")
                         .HasMaxLength(50);
 
                     b.Property<string>("LogInInclusao")
                         .IsRequired()
-                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 64)))
                         .HasColumnType("varchar")
                         .HasMaxLength(50);
 

@@ -27,8 +27,7 @@ namespace CharmosaApp.Infra.Data.Contexto
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("CharmosaAppContext");
-            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer("CharmosaCon");
         }
 
 
@@ -45,6 +44,7 @@ namespace CharmosaApp.Infra.Data.Contexto
                 {
                     entry.Property("DataCadastro").CurrentValue = DateTime.Now;
                     entry.Property("RegistroAtivo").CurrentValue = true;
+                    entry.Property("LogInInclusao").CurrentValue = "ADMINISTRADOR";
                 }
                 if(entry.State == EntityState.Modified)
                 {
