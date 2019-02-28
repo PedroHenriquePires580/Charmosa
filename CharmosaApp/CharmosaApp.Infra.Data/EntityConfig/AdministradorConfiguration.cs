@@ -24,7 +24,7 @@ namespace CharmosaApp.Infra.Data.EntityConfig
                 .HasColumnType("varchar");
 
 
-            builder.Property(a => a.UsuarioCodFuncao)
+            builder.Property(a => a.UsuarioFuncao)
                 .IsRequired();
 
             builder.Property(a => a.Login)
