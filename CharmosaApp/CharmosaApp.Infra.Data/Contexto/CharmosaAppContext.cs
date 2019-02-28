@@ -30,7 +30,7 @@ namespace CharmosaApp.Infra.Data.Contexto
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("CharmosaCon");
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CharmosaApp;Integrated Security=True;");
         }
 
 
