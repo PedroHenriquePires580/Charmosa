@@ -10,7 +10,6 @@ namespace CharmosaApp.MVC.ViewModels
     public class AdministradorViewModel : UsuarioViewModel
     {
         [Key]
-        [Required]
         public int AdministradorID { get; set; }
     }
 }

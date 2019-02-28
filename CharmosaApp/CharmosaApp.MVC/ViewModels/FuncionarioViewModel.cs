@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharmosaApp.MVC.ViewModels.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CharmosaApp.MVC.ViewModels
 {
-    public class FuncionarioViewModel
+    public class FuncionarioViewModel : UsuarioViewModel
     {
         [Key]
         public int FuncionarioID { get; set; }

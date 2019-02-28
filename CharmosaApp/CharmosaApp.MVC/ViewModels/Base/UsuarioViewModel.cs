@@ -14,11 +14,13 @@ namespace CharmosaApp.MVC.ViewModels.Base
         public int UsuarioCodFuncao { get; set; }
 
         [Required(ErrorMessage ="O campo Login é obrigatório")]
-        [MaxLength(50, ErrorMessage = "O tamanho máximo é de {50} caracteres")]
+        [MaxLength(50, ErrorMessage = "O tamanho máximo é de {0} caracteres")]
+        [MinLength(2, ErrorMessage = "O tamanho mínimo é de {0} caracteres")]
         public string Login { get; set; }
 
         [Required(ErrorMessage = "O campo Senha é obrigatório")]
-        [MaxLength(50, ErrorMessage = "O tamanho máximo é de {50} caracteres")]
+        [MaxLength(50, ErrorMessage = "O tamanho máximo é de {0} caracteres")]
+        [MinLength(2, ErrorMessage = "O tamanho mínimo é de {0} caracteres")]
         public string Senha { get; set; }
 
     }
