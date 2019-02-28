@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.Extensions.DependencyInjection;
+using CharmosaApp.MVC.AutoMapper;
 
 namespace CharmosaApp.MVC
 {
@@ -46,6 +47,11 @@ namespace CharmosaApp.MVC
             services.AddScoped<IAdministradorAppService, AdministradorAppService>();
             services.AddScoped<IFuncionarioAppService, FuncionarioAppService>();
             services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+
+            Mapper.Initialize(config => {
+                config.AddProfile<DomainToViewModelMappingProfile>();
+                config.AddProfile<ViewModelToDomainMappingProfile>();
+                });
 
 
             services.AddAutoMapper();

@@ -25,8 +25,8 @@ namespace CharmosaApp.MVC.Controllers
             return View();
         }
 
-        // GET: Administrador/Details/5
-        public ActionResult Details(int id)
+        // GET: Administrador/DetalhesFuncionario/5
+        public ActionResult DetalhesFuncionario(int id)
         {
             return View();
         }
@@ -47,10 +47,10 @@ namespace CharmosaApp.MVC.Controllers
             {
                 FuncionarioAppService appService =
                     new FuncionarioAppService(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>()));
-                var funcionario = Mapper.Map<FuncionarioViewModel, Funcionario>(funcionarioViewModel);
+                var funcionario = Mapper.Map<Funcionario>(funcionarioViewModel);
                 appService._funcionarioUnitOfWork.FuncionarioRepository.Add(funcionario);
                 appService._funcionarioUnitOfWork.Commit();
-
+                 
             }
 
             return View();
@@ -65,7 +65,7 @@ namespace CharmosaApp.MVC.Controllers
                 //// TODO: Add insert logic here
                 CharmosaAppContext dbContext = new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>());
                 AdministradorAppService appService =
-                    new AdministradorAppService(new UnitOfWork<Administrador>(dbContext));
+                    new AdministradorAppService(dbContext);
                 appService._administradorUnitOfWork.AdministradorRepository.Add(new Administrador());
 
                 return View();
