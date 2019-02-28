@@ -34,11 +34,11 @@
                         @Html.TextBoxFor(model => model.Salario, null, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.Salario, null, new { @class = "text-danger" })
                     </div>
-                    @Html.LabelFor(model => model.UsuarioCodFuncao, "Função", new { @class = "col-form-label col-sm-1 padding-top-12" })
+                    @Html.LabelFor(model => model.UsuarioFuncao, "Função", new { @class = "col-form-label col-sm-1 padding-top-12" })
 
                     <!-- Lista de função-->
                     <div class="col-sm-3">
-                        @Html.DropDownListFor(m => m.UsuarioCodFuncao, (ViewBag.UsuarioFuncao as SelectList), new {@class = "form-control" })
+                        @Html.DropDownListFor(m => m.UsuarioFuncao, (ViewBag.UsuarioFuncao as SelectList), new {@class = "form-control" })
                     </div>
                     <!-- fim Lista de função-->
                 </div>

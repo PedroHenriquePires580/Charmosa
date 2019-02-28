@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CharmosaApp.Application;
 using CharmosaApp.Application.Interfaces;
 using CharmosaApp.Infra.Data.Contexto;
@@ -42,6 +43,16 @@ namespace CharmosaApp.MVC.Controllers
         [HttpPost]
         public ActionResult CadastrarFuncionario(FuncionarioViewModel funcionarioViewModel)
         {
+            if (ModelState.IsValid)
+            {
+                FuncionarioAppService appService =
+                    new FuncionarioAppService(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>()));
+                var funcionario = Mapper.Map<FuncionarioViewModel, Funcionario>(funcionarioViewModel);
+                appService._funcionarioUnitOfWork.FuncionarioRepository.Add(funcionario);
+                appService._funcionarioUnitOfWork.Commit();
+
+            }
+
             return View();
         }
 

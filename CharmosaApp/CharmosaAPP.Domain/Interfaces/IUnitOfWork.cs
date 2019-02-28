@@ -8,6 +8,9 @@ namespace CharmosaAPP.Domain.Interfaces
 {
     public interface IUnitOfWork<T> : IDisposable  where T: class
     {
+        IRepositoryBase<T> RepositoryBase { get; }
+        IAdministradorRepository AdministradorRepository { get; }
+        IFuncionarioRepository FuncionarioRepository { get; }
         void Commit();
     }
 }

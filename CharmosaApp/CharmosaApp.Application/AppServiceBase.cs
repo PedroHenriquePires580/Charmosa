@@ -1,4 +1,6 @@
 ﻿using CharmosaApp.Application.Interfaces;
+using CharmosaApp.Infra.Data.Contexto;
+using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaAPP.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -13,9 +15,9 @@ namespace CharmosaApp.Application
     {
         private readonly IUnitOfWork<TEntity> _unitOfWork;
 
-        public AppServiceBase(IUnitOfWork<TEntity> unitOfWork)
+        public AppServiceBase(CharmosaAppContext dbContext)
         {
-            _unitOfWork = unitOfWork;
+            _unitOfWork = new UnitOfWork<TEntity>(dbContext);
         }
 
     }

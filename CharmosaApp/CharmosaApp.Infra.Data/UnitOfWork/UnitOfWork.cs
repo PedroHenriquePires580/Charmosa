@@ -12,9 +12,9 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
     public class UnitOfWork<T> : IUnitOfWork<T> where T : class
     {
         private CharmosaAppContext dbContext;
-        private FuncionarioRepository funcionarioRepository;
-        private AdministradorRepository administradorRepository;
-        private RepositoryBase<T> repositoryBase;
+        private IFuncionarioRepository funcionarioRepository;
+        private IAdministradorRepository administradorRepository;
+        private IRepositoryBase<T> repositoryBase;
 
         public UnitOfWork(CharmosaAppContext context)
         {
@@ -24,21 +24,21 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
         /// <summary>
         /// Instanciando os repositorios
         /// </summary>
-        public FuncionarioRepository FuncionarioRepository
+        public IFuncionarioRepository FuncionarioRepository
         {
             get
             {
                 return this.funcionarioRepository ?? new FuncionarioRepository(this.dbContext);
             }
         }
-        public AdministradorRepository AdministradorRepository
+        public IAdministradorRepository AdministradorRepository
         {
             get
             {
                 return this.administradorRepository ?? new AdministradorRepository(this.dbContext);
             }
         }
-        public RepositoryBase<T> RepositoryBase
+        public IRepositoryBase<T> RepositoryBase
         {
             get
             {
