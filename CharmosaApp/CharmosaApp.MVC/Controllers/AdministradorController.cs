@@ -8,8 +8,10 @@ using CharmosaApp.Infra.Data.Contexto;
 using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaApp.MVC.ViewModels;
 using CharmosaAPP.Domain.Entities;
+using CharmosaAPP.Domain.Entities.Enumeradores;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace CharmosaApp.MVC.Controllers
@@ -28,8 +30,17 @@ namespace CharmosaApp.MVC.Controllers
             return View();
         }
 
-        // GET: Administrador/Create
+        // GET: Administrador/CadastrarFuncionario
+        [HttpGet]
         public ActionResult CadastrarFuncionario()
+        {
+            ViewBag.UsuarioFuncao = new SelectList(Enum.GetValues(typeof(UsuarioFuncao)), UsuarioFuncao.Administrador);
+
+            return View();
+        }
+        // POST: Administrador/CadastrarFuncionario
+        [HttpPost]
+        public ActionResult CadastrarFuncionario(FuncionarioViewModel funcionarioViewModel)
         {
             return View();
         }

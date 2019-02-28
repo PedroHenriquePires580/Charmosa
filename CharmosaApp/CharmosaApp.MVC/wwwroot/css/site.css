@@ -35,3 +35,78 @@ body {
         display: none;
     }
 }
+
+/* meu CSS*/
+.padding-top-3 {
+    padding-top: 3px;
+}
+
+.padding-top-7 {
+    padding-top: 7px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-top-11 {
+    padding-top: 11px;
+}
+
+.padding-top-13 {
+    padding-top: 13px;
+}
+
+.padding-top-12 {
+    padding-top: 12px;
+}
+
+.padding-top-5 {
+    padding-top: 5px;
+}
+
+.padding-bottom-1 {
+    padding-bottom: 1px;
+}
+
+.padding-rigth-5{
+    padding-right: 5px;
+}
+
+.padding-rigth-15 {
+    padding-right: 15px;
+}
+
+.padding-rigth-30 {
+    padding-right: 30px;
+}
+
+.padding-left-15 {
+    padding-left: 15px;
+}
+
+.padding-left-30 {
+    padding-left: 30px;
+}
+
+.margin-left-5{
+    margin-left: 5px;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+.margin-left-13 {
+    margin-left: 13px;
+}
+
+label {
+    font-size: 16px;
+}
+
+font-botao {
+    font-size: 16px;
+    font-weight: bold;
+}
+
