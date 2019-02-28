@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using CharmosaApp.Application;
 using CharmosaApp.Application.Interfaces;
@@ -9,7 +5,6 @@ using CharmosaApp.Infra.Data.Contexto;
 using CharmosaApp.Infra.Data.Repositories;
 using CharmosaApp.Infra.Data.UnitOfWork;
 using CharmosaAPP.Domain.Interfaces;
-
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +12,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CharmosaApp.MVC

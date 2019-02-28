@@ -40,11 +40,11 @@ namespace CharmosaApp.MVC.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-                CharmosaAppContext dbContext = new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>());
-                AdministradorAppService appService = 
-                    new AdministradorAppService(new UnitOfWork<Administrador>(dbContext));
-                appService._administradorUnitOfWork.AdministradorRepository.Add(new Administrador());
+                //// TODO: Add insert logic here
+                //CharmosaAppContext dbContext = new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>());
+                //AdministradorAppService appService = 
+                //    new AdministradorAppService(new UnitOfWork<Administrador>(dbContext));
+                //appService._administradorUnitOfWork.AdministradorRepository.Add(new Administrador());
                 //unitOfWork.AdministradorRepository.Add(new Administrador());
 
                 return View();

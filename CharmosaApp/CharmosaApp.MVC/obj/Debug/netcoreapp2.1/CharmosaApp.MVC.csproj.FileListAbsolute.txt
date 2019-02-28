@@ -90,10 +90,15 @@ C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debu
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorAssemblyInfo.cs
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.AssemblyInfoInputs.cache
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.AssemblyInfo.cs
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.dll
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.pdb
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.deps.json
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.runtimeconfig.json
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.runtimeconfig.dev.json
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.dll
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.pdb
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.Views.dll
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.MVC.Views.pdb
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.Application.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaAPP.Domain.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\bin\Debug\netcoreapp2.1\CharmosaApp.Infra.Data.dll
@@ -119,4 +124,5 @@ C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debu
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorTargetAssemblyInfo.cache
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorTargetAssemblyInfo.cs
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.Views.pdb
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.csproj.CopyComplete

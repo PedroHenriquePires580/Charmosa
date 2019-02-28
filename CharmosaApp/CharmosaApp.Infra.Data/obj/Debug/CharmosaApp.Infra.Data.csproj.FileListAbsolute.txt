@@ -354,7 +354,6 @@ C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\De
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Security.AccessControl.dll
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Security.Permissions.dll
 C:\Users\pedro.henrique\Desktop\Estudo\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Security.Principal.Windows.dll
-C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Xml.XPath.XDocument.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaApp.Infra.Data.dll.config
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaApp.Infra.Data.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaApp.Infra.Data.pdb
@@ -453,6 +452,7 @@ C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\b
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Xml.XmlDocument.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Xml.XmlSerializer.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Xml.XPath.dll
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\System.Xml.XPath.XDocument.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\CharmosaAPP.Domain.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Infra.Data\bin\Debug\Microsoft.EntityFrameworkCore.dll
