@@ -106,6 +106,47 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.ToTable("TB_FUNCIONARIO");
                 });
+
+            modelBuilder.Entity("CharmosaAPP.Domain.Entities.Roupa", b =>
+                {
+                    b.Property<int>("RoupaID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("DataAlteracao");
+
+                    b.Property<DateTime>("DataCadastro");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("varchar")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("LogInAlteracao")
+                        .HasColumnType("varchar")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("LogInInclusao")
+                        .IsRequired()
+                        .HasColumnType("varchar")
+                        .HasMaxLength(50);
+
+                    b.Property<int>("QuantidadeEstoque");
+
+                    b.Property<int>("QuantidadeReservada");
+
+                    b.Property<bool>("RegistroAtivo");
+
+                    b.Property<int>("TamanhoRoupa");
+
+                    b.Property<int>("TipoRoupa");
+
+                    b.Property<decimal>("ValorUnidade");
+
+                    b.HasKey("RoupaID");
+
+                    b.ToTable("TB_ROUPA");
+                });
 #pragma warning restore 612, 618
         }
     }

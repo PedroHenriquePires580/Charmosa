@@ -33,18 +33,29 @@
   <ItemGroup>
     <Compile Include="Entities\Administrador.cs" />
     <Compile Include="Entities\Base\ClasseBase.cs" />
+    <Compile Include="Entities\Base\Mercadoria.cs" />
+    <Compile Include="Entities\Enumeradores\TamanhoRoupa.cs" />
+    <Compile Include="Entities\Enumeradores\TipoRoupa.cs" />
     <Compile Include="Entities\Enumeradores\UsuarioFuncao.cs" />
     <Compile Include="Entities\Funcionario.cs" />
     <Compile Include="Entities\Base\Usuario.cs" />
+    <Compile Include="Entities\Roupa.cs" />
     <Compile Include="Interfaces\IAdministradorRepository.cs" />
     <Compile Include="Interfaces\IFuncionarioRepository.cs" />
     <Compile Include="Interfaces\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\IRoupaRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\Services\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\ref\netcoreapp2.1\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

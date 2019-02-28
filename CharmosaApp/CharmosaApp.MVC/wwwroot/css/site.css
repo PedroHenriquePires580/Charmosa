@@ -3,6 +3,8 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    /* MEU CSS GERAL*/
+    background-color: pink;
 }
 
 /* Wrapping element */
@@ -110,3 +112,7 @@ font-botao {
     font-weight: bold;
 }
 
+.div-view{
+    background-color:white;
+    margin-top:10px;
+}

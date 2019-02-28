@@ -15,7 +15,7 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
         private IFuncionarioRepository funcionarioRepository;
         private IAdministradorRepository administradorRepository;
         private IRepositoryBase<T> repositoryBase;
-
+        private IRoupaRepository roupaRepository;
         public UnitOfWork(CharmosaAppContext context)
         {
             this.dbContext = context;
@@ -45,6 +45,14 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
                 return this.repositoryBase ?? new RepositoryBase<T>(this.dbContext);
             }
         }
+        public IRoupaRepository RoupaRepository
+        {
+            get
+            {
+                return this.roupaRepository ?? new RoupaRepository(this.dbContext);
+            }
+        }
+
         public void Commit()
         {
             dbContext.SaveChanges();

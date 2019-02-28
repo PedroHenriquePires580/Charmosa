@@ -63,3 +63,5 @@ C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Application\
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Application\obj\Debug\CharmosaApp.Application.csproj.CopyComplete
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Application\obj\Debug\CharmosaApp.Application.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Application\obj\Debug\CharmosaApp.Application.pdb
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Application\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.Application\bin\Debug\System.ComponentModel.Primitives.xml
