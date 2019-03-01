@@ -4,14 +4,16 @@ using CharmosaApp.Infra.Data.Contexto;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CharmosaApp.MVC.Migrations
 {
     [DbContext(typeof(CharmosaAppContext))]
-    partial class CharmosaAppContextModelSnapshot : ModelSnapshot
+    [Migration("20190301153832_addingClienteTelefone")]
+    partial class addingClienteTelefone
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -147,7 +149,7 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.HasKey("ClienteID");
 
-                    b.ToTable("TB_CLIENTE");
+                    b.ToTable("Cliente");
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Funcionario", b =>
@@ -292,7 +294,7 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.Property<int?>("AdministradorAdmistradorID");
 
-                    b.Property<int>("ClienteID");
+                    b.Property<int?>("ClienteID");
 
                     b.Property<string>("DDD")
                         .IsRequired()
@@ -330,7 +332,7 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.HasIndex("FuncionarioID");
 
-                    b.ToTable("TB_TELEFONE");
+                    b.ToTable("Telefone");
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Telefone", b =>
@@ -339,10 +341,9 @@ namespace CharmosaApp.MVC.Migrations
                         .WithMany("Telefones")
                         .HasForeignKey("AdministradorAdmistradorID");
 
-                    b.HasOne("CharmosaAPP.Domain.Entities.Cliente", "Cliente")
+                    b.HasOne("CharmosaAPP.Domain.Entities.Cliente")
                         .WithMany("Telefones")
-                        .HasForeignKey("ClienteID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ClienteID");
 
                     b.HasOne("CharmosaAPP.Domain.Entities.Funcionario")
                         .WithMany("Telefones")

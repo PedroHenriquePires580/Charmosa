@@ -98,6 +98,10 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(c => c.ClienteID)
                 .IsRequired();
 
+            builder.ToTable("TB_CLIENTE")
+                .HasMany(c => c.Telefones)
+                .WithOne(t => t.Cliente);
+
             #endregion
         }
     }

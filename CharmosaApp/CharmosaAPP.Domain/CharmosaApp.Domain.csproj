@@ -34,16 +34,21 @@
     <Compile Include="Entities\Administrador.cs" />
     <Compile Include="Entities\Base\ClasseBase.cs" />
     <Compile Include="Entities\Base\Mercadoria.cs" />
+    <Compile Include="Entities\Base\UsuarioInfo.cs" />
+    <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Enumeradores\TamanhoRoupa.cs" />
     <Compile Include="Entities\Enumeradores\TipoRoupa.cs" />
     <Compile Include="Entities\Enumeradores\UsuarioFuncao.cs" />
     <Compile Include="Entities\Funcionario.cs" />
     <Compile Include="Entities\Base\Usuario.cs" />
     <Compile Include="Entities\Roupa.cs" />
+    <Compile Include="Entities\Telefone.cs" />
     <Compile Include="Interfaces\IAdministradorRepository.cs" />
+    <Compile Include="Interfaces\IClienteRepository.cs" />
     <Compile Include="Interfaces\IFuncionarioRepository.cs" />
     <Compile Include="Interfaces\IRepositoryBase.cs" />
     <Compile Include="Interfaces\IRoupaRepository.cs" />
+    <Compile Include="Interfaces\ITelefoneRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

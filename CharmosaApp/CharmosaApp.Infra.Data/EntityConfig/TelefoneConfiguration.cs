@@ -14,6 +14,11 @@ namespace CharmosaApp.Infra.Data.EntityConfig
         public void Configure(EntityTypeBuilder<Telefone> builder)
         {
             #region | Dados Especificos |
+            builder.ToTable("TB_TELEFONE");
+
+            builder.Property(t => t.ClienteID)
+                .IsRequired();
+
             builder.Property(t => t.TelefoneID)
                 .IsRequired();
 
@@ -28,6 +33,16 @@ namespace CharmosaApp.Infra.Data.EntityConfig
                 .HasMaxLength(250);
             #endregion
             #region | Dados Compartilhados |
+
+            builder.Property(f => f.LogInInclusao)
+               .IsRequired()
+               .HasMaxLength(50)
+               .HasColumnType("nvarchar(50)");
+
+            builder.Property(f => f.LogInAlteracao)
+                .HasMaxLength(50)
+                .HasColumnType("nvarchar(50)");
+
             #endregion
         }
     }
