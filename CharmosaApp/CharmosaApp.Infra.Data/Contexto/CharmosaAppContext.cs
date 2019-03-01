@@ -45,8 +45,8 @@ namespace CharmosaApp.Infra.Data.Contexto
             {
                 if (entry.State == EntityState.Added)
                 {
-                    entry.Property("DataCadastro").CurrentValue = DateTime.Now;
-                    entry.Property("RegistroAtivo").CurrentValue = true;
+                    entry.Property("DataCadastro").CurrentValue = DateTime.Now.Date;
+                    entry.Property("RegistroAtivo").CurrentValue = 1;
                     entry.Property("LogInInclusao").CurrentValue = "ADMINISTRADOR";
                 }
                 if(entry.State == EntityState.Modified)

@@ -5,6 +5,6 @@
         public int FuncionarioID { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public decimal Salario { get; set; }
+        public double Salario { get; set; }
     }
 }

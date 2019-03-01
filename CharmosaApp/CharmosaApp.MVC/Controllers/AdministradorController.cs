@@ -26,14 +26,15 @@ namespace CharmosaApp.MVC.Controllers
         }
 
         // GET: Administrador/DetalhesFuncionario/5
+        [HttpGet]
         public ActionResult DetalhesFuncionario(int id)
         {
             return View();
         }
 
-        // GET: Administrador/CadastrarFuncionario
+        // GET: Administrador/CadastrarUsuario
         [HttpGet]
-        public ActionResult CadastrarFuncionario()
+        public ActionResult CadastrarUsuario()
         {
             ViewBag.UsuarioFuncao = new SelectList(Enum.GetValues(typeof(UsuarioFuncao)), UsuarioFuncao.Administrador);
 
@@ -41,7 +42,7 @@ namespace CharmosaApp.MVC.Controllers
         }
         // POST: Administrador/CadastrarFuncionario
         [HttpPost]
-        public ActionResult CadastrarFuncionario(FuncionarioViewModel funcionarioViewModel)
+        public ActionResult CadastrarUsuario(FuncionarioViewModel funcionarioViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -50,7 +51,7 @@ namespace CharmosaApp.MVC.Controllers
                 var funcionario = Mapper.Map<Funcionario>(funcionarioViewModel);
                 appService._funcionarioUnitOfWork.FuncionarioRepository.Add(funcionario);
                 appService._funcionarioUnitOfWork.Commit();
-                 
+                return RedirectToAction(nameof(DetalhesFuncionario), new { id = funcionario.FuncionarioID });
             }
 
             return View();

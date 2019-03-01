@@ -11,7 +11,7 @@ namespace CharmosaAPP.Domain.Entities
     public abstract class Usuario : ClasseBase
     {
         //public int UsuarioID { get; set; }
-        public UsuarioFuncao UsuarioFuncao { get; set; }
+        public int UsuarioFuncao { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
 

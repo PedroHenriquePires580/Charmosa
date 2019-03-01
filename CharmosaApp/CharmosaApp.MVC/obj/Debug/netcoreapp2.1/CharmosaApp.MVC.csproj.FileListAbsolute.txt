@@ -118,7 +118,6 @@ C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debu
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewStart.g.cshtml.cs
-C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Administrador\CadastrarFuncionario.g.cshtml.cs
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Administrador\Create.g.cshtml.cs
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.RazorTargetAssemblyInfo.cache
@@ -128,3 +127,4 @@ C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debu
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.dll
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\CharmosaApp.MVC.pdb
 C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Administrador\DetalhesFuncionario.g.cshtml.cs
+C:\Users\pedro.henrique\Desktop\CharmosaApp\CharmosaApp\CharmosaApp.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Administrador\CadastrarUsuario.g.cshtml.cs

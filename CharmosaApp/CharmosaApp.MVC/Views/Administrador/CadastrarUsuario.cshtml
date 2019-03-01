@@ -1,0 +1,73 @@
+﻿@model CharmosaApp.MVC.ViewModels.FuncionarioViewModel
+
+@{
+    ViewData["Title"] = "CadastrarUsuario";
+    Layout = "_Layout";
+
+}
+
+
+<div class="container div-view">
+    <h2>Cadastro de Funcionarios - Charmosa</h2>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-10">
+            <form asp-action="CadastrarUsuario" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- NOME E SOBRENOME-->
+                <div class="form-group row right">
+                    @Html.LabelFor(model => model.Nome, "Nome", new { @class = "col-form-label col-sm-1 padding-top-12" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(model => model.Nome, null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Nome, null, new { @class = "text-danger" })
+                    </div>
+                    @Html.LabelFor(model => model.Sobrenome, "Sobrenome", new { @class = "col-form-label col-sm-1 padding-top-12" })
+                    <div class="col-sm-5 ">
+                        @Html.TextBoxFor(model => model.Sobrenome, null, new { @class = "form-control col-sm-offset-1" })
+                        @Html.ValidationMessageFor(model => model.Sobrenome, null, new { @class = "text-danger col-sm-offset-1" })
+                    </div>
+                </div>
+                <!-- SALARIO E FUNCAO-->
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Salario, "Salario", new { @class = "col-form-label col-sm-1 padding-top-12" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(model => model.Salario, null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Salario, null, new { @class = "text-danger" })
+                    </div>
+                    @Html.LabelFor(model => model.UsuarioFuncao, "Função", new { @class = "col-form-label col-sm-1 padding-top-12" })
+
+                    <!-- Lista de função-->
+                    <div class="col-sm-3">
+                        @Html.DropDownListFor(m => m.UsuarioFuncao, (ViewBag.UsuarioFuncao as SelectList), new { @class = "form-control" })
+                    </div>
+                    <!-- fim Lista de função-->
+                </div>
+
+                <!-- LOGIN E SENHA-->
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Login, "Login", new { @class = "col-form-label col-sm-1 padding-top-12" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(model => model.Login, null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Login, null, new { @class = "text-danger" })
+                    </div>
+                    @Html.LabelFor(model => model.Senha, "Senha", new { @class = "col-form-label col-sm-1 padding-top-12" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(model => model.Senha, null, new { @class = "form-control", @type = "password" })
+                        @Html.ValidationMessageFor(model => model.Senha, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @*@Html.Label("Cadastrar", "Cadastrar", new { @class = "btn btn-primary col-sm-2", @type = "submit" })*@
+                    <input type="submit" value="Cadastrar" class="btn btn-primary col-sm-2 margin-left-13 font-botao" />
+                    <input type="reset" value="Limpar" class="btn btn-danger col-sm-2 margin-left-13 font-botao" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

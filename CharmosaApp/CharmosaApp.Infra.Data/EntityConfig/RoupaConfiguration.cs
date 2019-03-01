@@ -22,7 +22,7 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(r => r.Descricao)
                 .IsRequired()
                 .HasMaxLength(250)
-                .HasColumnType("varchar");
+                .HasColumnType("nvarchar");
 
             builder.Property(r => r.TamanhoRoupa)
                 .IsRequired();
@@ -42,11 +42,11 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(r => r.LogInInclusao)
                 .IsRequired()
                 .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .HasColumnType("nvarchar");
 
             builder.Property(r => r.LogInAlteracao)
                 .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .HasColumnType("nvarchar");
 
 
             

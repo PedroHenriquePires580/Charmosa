@@ -25,8 +25,8 @@ namespace CharmosaApp.MVC.ViewModels
         public string Sobrenome { get; set; }
 
         [Required(ErrorMessage = "O campo Salário é obrigatorio")]
-        [Range(0,99999,ErrorMessage ="O salario deve estar entre {1} e {2} reais")]
+        [Range(0,Double.MaxValue,ErrorMessage ="O salario deve estar entre {1} e 99999999 reais")]
         [DisplayName("Salário")]
-        public decimal Salario { get; set; }
+        public double Salario { get; set; }
     }
 }

@@ -12,6 +12,6 @@ namespace CharmosaAPP.Domain.Entities.Base
         public DateTime? DataAlteracao { get; set; }
         public string LogInInclusao { get; set; }
         public string LogInAlteracao { get; set; }
-        public bool RegistroAtivo { get; set; }
+        public int RegistroAtivo { get; set; }
     }
 }

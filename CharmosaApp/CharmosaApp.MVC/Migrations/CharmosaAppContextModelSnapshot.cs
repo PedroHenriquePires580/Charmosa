@@ -30,27 +30,27 @@ namespace CharmosaApp.MVC.Migrations
                     b.Property<DateTime>("DataCadastro");
 
                     b.Property<string>("LogInAlteracao")
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("LogInInclusao")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("Login")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<bool>("RegistroAtivo");
+                    b.Property<int>("RegistroAtivo");
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.Property<int>("UsuarioCodFuncao");
+                    b.Property<int>("UsuarioFuncao");
 
                     b.HasKey("AdmistradorID");
 
@@ -68,39 +68,39 @@ namespace CharmosaApp.MVC.Migrations
                     b.Property<DateTime>("DataCadastro");
 
                     b.Property<string>("LogInAlteracao")
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("LogInInclusao")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("Login")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250);
 
-                    b.Property<bool>("RegistroAtivo");
+                    b.Property<int>("RegistroAtivo");
 
-                    b.Property<decimal>("Salario");
+                    b.Property<double>("Salario");
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250);
 
-                    b.Property<int>("UsuarioCodFuncao");
+                    b.Property<int>("UsuarioFuncao");
 
                     b.HasKey("FuncionarioID");
 
@@ -119,23 +119,23 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar")
                         .HasMaxLength(250);
 
                     b.Property<string>("LogInAlteracao")
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar")
                         .HasMaxLength(50);
 
                     b.Property<string>("LogInInclusao")
                         .IsRequired()
-                        .HasColumnType("varchar")
+                        .HasColumnType("nvarchar")
                         .HasMaxLength(50);
 
                     b.Property<int>("QuantidadeEstoque");
 
                     b.Property<int>("QuantidadeReservada");
 
-                    b.Property<bool>("RegistroAtivo");
+                    b.Property<int>("RegistroAtivo");
 
                     b.Property<int>("TamanhoRoupa");
 

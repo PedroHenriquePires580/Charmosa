@@ -15,12 +15,12 @@ namespace CharmosaApp.Infra.Data.EntityConfig
 
             builder.Property(f => f.Nome)
                 .IsRequired()
-                .HasColumnType("varchar")
+                .HasColumnType("nvarchar(250)")
                 .HasMaxLength(250);
 
             builder.Property(f => f.Sobrenome)
                 .IsRequired()
-                .HasColumnType("varchar")
+                .HasColumnType("nvarchar(250)")
                 .HasMaxLength(250);
 
             builder.Property(f => f.Salario)
@@ -31,11 +31,11 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(f => f.LogInInclusao)
                 .IsRequired()
                 .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .HasColumnType("nvarchar(50)");
 
             builder.Property(f => f.LogInAlteracao)
                 .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .HasColumnType("nvarchar(50)");
 
 
             builder.Property(f => f.UsuarioFuncao)
@@ -44,12 +44,12 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(f => f.Login)
                 .IsRequired()
                 .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .HasColumnType("nvarchar(50)");
 
             builder.Property(f => f.Senha)
                 .IsRequired()
                 .HasMaxLength(30)
-                .HasColumnType("varchar"); 
+                .HasColumnType("nvarchar(30)"); 
         }
     }
 }
