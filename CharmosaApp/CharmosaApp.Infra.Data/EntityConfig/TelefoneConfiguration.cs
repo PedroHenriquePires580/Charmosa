@@ -13,7 +13,22 @@ namespace CharmosaApp.Infra.Data.EntityConfig
     {
         public void Configure(EntityTypeBuilder<Telefone> builder)
         {
-            throw new NotImplementedException();
+            #region | Dados Especificos |
+            builder.Property(t => t.TelefoneID)
+                .IsRequired();
+
+            builder.Property(t => t.DDD)
+                .IsRequired()
+                .HasColumnType("nvarchar(250)")
+                .HasMaxLength(250);
+
+            builder.Property(t => t.Numero)
+                .IsRequired()
+                .HasColumnType("nvarchar(250)")
+                .HasMaxLength(250);
+            #endregion
+            #region | Dados Compartilhados |
+            #endregion
         }
     }
 }
