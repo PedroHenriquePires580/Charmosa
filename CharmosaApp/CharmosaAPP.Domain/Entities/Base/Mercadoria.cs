@@ -8,7 +8,7 @@ namespace CharmosaAPP.Domain.Entities.Base
 {
     public abstract class Mercadoria : ClasseBase
     {
-        public decimal ValorUnidade { get; set; }
+        public double ValorUnidade { get; set; }
         public int QuantidadeEstoque { get; set; }
         public int QuantidadeReservada { get; set; }
     }
