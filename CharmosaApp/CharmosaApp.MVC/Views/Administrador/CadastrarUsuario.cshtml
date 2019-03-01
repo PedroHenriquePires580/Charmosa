@@ -1,19 +1,19 @@
 ﻿@model CharmosaApp.MVC.ViewModels.FuncionarioViewModel
 
 @{
-    ViewData["Title"] = "CadastrarUsuario";
+    ViewData["Title"] = "CadastrarUsuarios";
     Layout = "_Layout";
 
 }
 
 
 <div class="container div-view">
-    <h2>Cadastro de Funcionarios - Charmosa</h2>
+    <h2>Cadastro de Usuários - Charmosa</h2>
 
     <hr />
     <div class="row">
         <div class="col-md-10">
-            <form asp-action="CadastrarUsuario" method="post">
+            <form asp-action="CadastrarUsuarios" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <!-- NOME E SOBRENOME-->
                 <div class="form-group row right">

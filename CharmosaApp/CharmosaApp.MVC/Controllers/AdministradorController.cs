@@ -29,14 +29,20 @@ namespace CharmosaApp.MVC.Controllers
         [HttpGet]
         public ActionResult DetalhesFuncionario(int id)
         {
-            return View();
+            FuncionarioAppService appService
+                = new FuncionarioAppService(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>()));
+
+            Funcionario funcionario = appService._funcionarioUnitOfWork.FuncionarioRepository.GetByID(id);
+            var funcionarioView = Mapper.Map<FuncionarioViewModel>(funcionario);
+
+            return View(funcionarioView);
         }
 
         // GET: Administrador/CadastrarUsuario
         [HttpGet]
         public ActionResult CadastrarUsuario()
         {
-            ViewBag.UsuarioFuncao = new SelectList(Enum.GetValues(typeof(UsuarioFuncao)), UsuarioFuncao.Administrador);
+            ViewBag.UsuarioFuncao = new SelectList(Enum.GetValues(typeof(UsuarioFuncao)), UsuarioFuncao.Funcionario);
 
             return View();
         }

@@ -9,6 +9,7 @@ namespace CharmosaAPP.Domain.Entities.Enumeradores
     public enum UsuarioFuncao 
     {
         Administrador = 1,
-        Funcionario = 2
+        Funcionario = 2,
+        Cliente = 3
     }
 }

@@ -14,6 +14,8 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
         private CharmosaAppContext dbContext;
         private IFuncionarioRepository funcionarioRepository;
         private IAdministradorRepository administradorRepository;
+        private IClienteRepository clienteRepository;
+        private ITelefoneRepository telefoneRepository;
         private IRepositoryBase<T> repositoryBase;
         private IRoupaRepository roupaRepository;
         public UnitOfWork(CharmosaAppContext context)
@@ -29,6 +31,20 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
             get
             {
                 return this.funcionarioRepository ?? new FuncionarioRepository(this.dbContext);
+            }
+        }
+        public IClienteRepository ClienteRepository
+        {
+            get
+            {
+                return this.clienteRepository ?? new ClienteRepository(this.dbContext);
+            }
+        }
+        public ITelefoneRepository TelefoneRepository
+        {
+            get
+            {
+                return this.telefoneRepository ?? new TelefoneRepository(this.dbContext);
             }
         }
         public IAdministradorRepository AdministradorRepository

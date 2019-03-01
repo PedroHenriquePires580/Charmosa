@@ -2,59 +2,65 @@
 
 @{
     ViewData["Title"] = "DetalhesFuncionario";
+    Layout = "_Layout";
 }
 
-<h2>Detalhes do Funcionario</h2>
 
-<div>
-    <h4>FuncionarioViewModel</h4>
+<div class="container div-view">
+    <h2>Informações do Funcionario - @Html.DisplayFor(model => model.Nome)</h2>
+
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FuncionarioID)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FuncionarioID)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Sobrenome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Sobrenome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Salario)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Salario)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.UsuarioFuncao)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.UsuarioFuncao)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Login)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Login)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Senha)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Senha)
-        </dd>
-    </dl>
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.FuncionarioID)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FuncionarioID)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sobrenome)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Sobrenome)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Salario)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Salario)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.UsuarioFuncao)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.UsuarioFuncao)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Login)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Login)
+                </dd>
+
+            </dl>
+        </div>
+        <div class="col-md-6">
+            <div>
+                @Html.ActionLink("Editar", "CadastrarUsuario","Administrador",null, new { @class="btn btn-primary" }) |
+      
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+    
+ 
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+

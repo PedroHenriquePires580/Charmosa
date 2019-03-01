@@ -1,10 +1,10 @@
-﻿namespace CharmosaAPP.Domain.Entities
+﻿using CharmosaAPP.Domain.Entities.Base;
+
+namespace CharmosaAPP.Domain.Entities
 {
-    public class Funcionario : Usuario
+    public class Funcionario : UsuarioInfo
     {
         public int FuncionarioID { get; set; }
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
         public double Salario { get; set; }
     }
 }

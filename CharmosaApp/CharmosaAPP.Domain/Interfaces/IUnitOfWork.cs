@@ -12,6 +12,8 @@ namespace CharmosaAPP.Domain.Interfaces
         IAdministradorRepository AdministradorRepository { get; }
         IFuncionarioRepository FuncionarioRepository { get; }
         IRoupaRepository RoupaRepository { get; }
+        ITelefoneRepository TelefoneRepository { get; }
+        IClienteRepository ClienteRepository { get; }
         void Commit();
     }
 }

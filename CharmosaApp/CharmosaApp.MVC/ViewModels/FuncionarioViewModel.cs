@@ -11,6 +11,7 @@ namespace CharmosaApp.MVC.ViewModels
     public class FuncionarioViewModel : UsuarioViewModel
     {
         [Key]
+        [DisplayName("Código do Funcionário")]
         public int FuncionarioID { get; set; }
 
         [Required(ErrorMessage ="O campo Nome é obrigatório")]

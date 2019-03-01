@@ -12,6 +12,8 @@ namespace CharmosaApp.Infra.Data.EntityConfig
         public void Configure(EntityTypeBuilder<Funcionario> builder)
         {
             builder.HasKey(f => f.FuncionarioID);
+            builder.Property(f => f.Salario)
+                .IsRequired();
 
             builder.Property(f => f.Nome)
                 .IsRequired()
@@ -23,8 +25,7 @@ namespace CharmosaApp.Infra.Data.EntityConfig
                 .HasColumnType("nvarchar(250)")
                 .HasMaxLength(250);
 
-            builder.Property(f => f.Salario)
-                .IsRequired();
+            
 
             builder.ToTable("TB_FUNCIONARIO");
 

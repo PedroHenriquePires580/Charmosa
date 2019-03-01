@@ -12,8 +12,11 @@ namespace CharmosaAPP.Domain.Entities
     {
         //public int UsuarioID { get; set; }
         public int UsuarioFuncao { get; set; }
+        public string Email { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
+        public virtual List<Telefone> Telefones { get; set; }
+
 
         string GetFuncaoDescricao(int ID)
         {

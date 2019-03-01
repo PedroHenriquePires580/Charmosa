@@ -15,8 +15,9 @@ namespace CharmosaApp.Infra.Data.Contexto
 
         DbSet<Administrador> Administrador { get; set; }
         DbSet<Funcionario> Funcionario { get; set; }
-
+        DbSet<Telefone> Telefone { get; set; }
         DbSet<Roupa> Roupa { get; set; }
+        DbSet<Cliente> Cliente { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,6 +27,8 @@ namespace CharmosaApp.Infra.Data.Contexto
             modelBuilder.ApplyConfiguration(new AdministradorConfiguration());
             modelBuilder.ApplyConfiguration(new FuncionarioConfiguration());
             modelBuilder.ApplyConfiguration(new RoupaConfiguration());
+            modelBuilder.ApplyConfiguration(new ClienteConfiguration());
+            modelBuilder.ApplyConfiguration(new TelefoneConfiguration());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
