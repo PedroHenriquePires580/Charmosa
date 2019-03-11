@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace CharmosaAPP.Domain.Entities
 {
-    public class Roupa : Mercadoria
+    public class Roupa : ClasseBase
     {
         public int RoupaID { get; set; }
         public string Descricao { get; set; }
         public TamanhoRoupa TamanhoRoupa { get; set; }
         public TipoRoupa TipoRoupa { get; set; }
+        public TipoProduto TipoProduto { get; set; }
+
     }
 }
