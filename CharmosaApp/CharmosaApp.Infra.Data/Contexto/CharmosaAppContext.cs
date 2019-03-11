@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using CharmosaApp.Infra.Data.EntityConfig;
+using CharmosaAPP.Domain.Entities.Base;
 
 namespace CharmosaApp.Infra.Data.Contexto
 {
@@ -12,12 +13,18 @@ namespace CharmosaApp.Infra.Data.Contexto
         {
 
         }
-
+        #region | DbSets |
         DbSet<Administrador> Administrador { get; set; }
         DbSet<Funcionario> Funcionario { get; set; }
         DbSet<Telefone> Telefone { get; set; }
+        DbSet<Produto> Produto { get; set; }
         DbSet<Roupa> Roupa { get; set; }
         DbSet<Cliente> Cliente { get; set; }
+        DbSet<Carrinho> Carrinho { get; set; }
+
+        #endregion
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

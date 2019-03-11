@@ -16,7 +16,9 @@ namespace CharmosaApp.Infra.Data.EntityConfig
         /// </summary>
         public void Configure(EntityTypeBuilder<Roupa> builder)
         {
+            #region | Dados Especificos |
             builder.HasKey(r => r.RoupaID);
+
             builder.ToTable("TB_ROUPA");
 
             builder.Property(r => r.Descricao)
@@ -30,26 +32,25 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(r => r.TipoRoupa)
                 .IsRequired();
 
-            builder.Property(r => r.ValorUnidade)
+
+            builder.Property(p => p.TipoProduto)
                 .IsRequired();
 
-            builder.Property(r => r.QuantidadeEstoque)
-                .IsRequired();
+            #endregion
 
-            builder.Property(r => r.QuantidadeReservada)
-                .IsRequired();
-
-            builder.Property(r => r.LogInInclusao)
+            #region | Dados Compartilhados |
+            builder.Property(c => c.LogInInclusao)
                 .IsRequired()
                 .HasMaxLength(50)
-                .HasColumnType("nvarchar");
+                .HasColumnType("nvarchar(50)");
 
-            builder.Property(r => r.LogInAlteracao)
+            builder.Property(c => c.LogInAlteracao)
                 .HasMaxLength(50)
-                .HasColumnType("nvarchar");
+                .HasColumnType("nvarchar(50)");
+
+            #endregion
 
 
-            
         }
     }
 }

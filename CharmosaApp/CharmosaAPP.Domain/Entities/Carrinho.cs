@@ -22,11 +22,11 @@ namespace CharmosaAPP.Domain.Entities
             }
             set
             {
-                SubTotal = Quantidade * Mercadoria.ValorUnidade;
+                subTotal = Quantidade * Produto.ValorUnidade;
             }
         }
  
-        public virtual Mercadoria Mercadoria { get; set; }
+        public virtual Produto Produto { get; set; }
         public virtual Cliente Cliente { get; set; }
 
     }

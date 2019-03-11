@@ -15,6 +15,10 @@ namespace CharmosaApp.Infra.Data.EntityConfig
         {
             #region | Dados Compartilhados |
 
+            builder.HasMany(c => c.Produtos)
+                .WithOne(c => c.Cliente);
+                
+
             builder.Property(c => c.Nome)
                 .IsRequired()
                 .HasColumnType("nvarchar(250)")

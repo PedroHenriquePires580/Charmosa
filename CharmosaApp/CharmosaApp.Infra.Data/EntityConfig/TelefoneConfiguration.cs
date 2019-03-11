@@ -31,6 +31,8 @@ namespace CharmosaApp.Infra.Data.EntityConfig
                 .IsRequired()
                 .HasColumnType("nvarchar(250)")
                 .HasMaxLength(250);
+
+            builder.HasOne(t => t.Cliente);
             #endregion
             #region | Dados Compartilhados |
 
