@@ -10,7 +10,7 @@ namespace CharmosaAPP.Domain.Entities
     public class Carrinho : ClasseBase
     {
         public int CarrinhoID { get; set; }
-        public int ClienteID { get; set; }
+        public int UsuarioID { get; set; }
         public int ProdutoID { get; set; }
         public int Quantidade { get; set; }
 
@@ -27,7 +27,7 @@ namespace CharmosaAPP.Domain.Entities
         }
  
         public virtual Produto Produto { get; set; }
-        public virtual Cliente Cliente { get; set; }
+        public virtual Usuario Usuario { get; set; }
 
     }
 }

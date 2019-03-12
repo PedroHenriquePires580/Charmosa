@@ -21,10 +21,5 @@ namespace CharmosaApp.Application
             _administradorUnitOfWork = new UnitOfWork<Administrador>(dbContext);
         }
 
-        public void AddFuncionario(Funcionario funcionario)
-        {
-            _administradorUnitOfWork.FuncionarioRepository.Add(funcionario);
-            _administradorUnitOfWork.Commit();
-        }
     }
 }

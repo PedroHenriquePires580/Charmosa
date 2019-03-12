@@ -11,13 +11,20 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
 {
     public class UnitOfWork<T> : IUnitOfWork<T> where T : class
     {
+        #region | Variaveis |
         private CharmosaAppContext dbContext;
-        private IFuncionarioRepository funcionarioRepository;
-        private IAdministradorRepository administradorRepository;
-        private IClienteRepository clienteRepository;
-        private ITelefoneRepository telefoneRepository;
         private IRepositoryBase<T> repositoryBase;
+
+        private IAdministradorRepository administradorRepository;
+        private ICarrinhoRepository carrinhoRepository;
+        private IClienteRepository clienteRepository;
+        private IFuncionarioRepository funcionarioRepository;
+        private IProdutoRepository produtoRepository;
         private IRoupaRepository roupaRepository;
+        private ITelefoneRepository telefoneRepository;
+        private IUsuarioRepository usuarioRepository;
+        #endregion
+
         public UnitOfWork(CharmosaAppContext context)
         {
             this.dbContext = context;
@@ -26,11 +33,19 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
         /// <summary>
         /// Instanciando os repositorios
         /// </summary>
-        public IFuncionarioRepository FuncionarioRepository
+         
+        public IAdministradorRepository AdministradorRepository
         {
             get
             {
-                return this.funcionarioRepository ?? new FuncionarioRepository(this.dbContext);
+                return this.administradorRepository ?? new AdministradorRepository(this.dbContext);
+            }
+        }
+        public ICarrinhoRepository CarrinhoRepository
+        {
+            get
+            {
+                return this.carrinhoRepository ?? new CarrinhoRepository(this.dbContext);
             }
         }
         public IClienteRepository ClienteRepository
@@ -40,27 +55,21 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
                 return this.clienteRepository ?? new ClienteRepository(this.dbContext);
             }
         }
-        public ITelefoneRepository TelefoneRepository
+        public IFuncionarioRepository FuncionarioRepository
         {
             get
             {
-                return this.telefoneRepository ?? new TelefoneRepository(this.dbContext);
+                return this.funcionarioRepository ?? new FuncionarioRepository(this.dbContext);
             }
         }
-        public IAdministradorRepository AdministradorRepository
-        {
+
+        public IProdutoRepository ProdutoRepository {
             get
             {
-                return this.administradorRepository ?? new AdministradorRepository(this.dbContext);
+                return this.produtoRepository ?? new ProdutoRepository(this.dbContext);
             }
         }
-        public IRepositoryBase<T> RepositoryBase
-        {
-            get
-            {
-                return this.repositoryBase ?? new RepositoryBase<T>(this.dbContext);
-            }
-        }
+
         public IRoupaRepository RoupaRepository
         {
             get
@@ -68,6 +77,31 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
                 return this.roupaRepository ?? new RoupaRepository(this.dbContext);
             }
         }
+        public ITelefoneRepository TelefoneRepository
+        {
+            get
+            {
+                return this.telefoneRepository ?? new TelefoneRepository(this.dbContext);
+            }
+        }
+
+        public IUsuarioRepository UsuarioRepository
+        {
+            get
+            {
+                return this.usuarioRepository ?? new UsuarioRepository(this.dbContext);
+            }
+        }
+
+
+        public IRepositoryBase<T> RepositoryBase
+        {
+            get
+            {
+                return this.repositoryBase ?? new RepositoryBase<T>(this.dbContext);
+            }
+        }
+       
 
         public void Commit()
         {

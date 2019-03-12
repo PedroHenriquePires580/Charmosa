@@ -10,10 +10,8 @@ namespace CharmosaAPP.Domain.Entities
     public class Telefone : ClasseBase
     {
         public int TelefoneID { get; set; }
-        public int ClienteID { get; set; }
+        public int UsuarioID { get; set; }
         public int DDD { get; set; }
         public string Numero { get; set; }
-
-        public virtual Cliente Cliente { get; set; }
     }
 }

@@ -16,8 +16,5 @@ namespace CharmosaAPP.Domain.Entities
         public double ValorUnidade { get; set; }
         public int QuantidadeEstoque { get; set; }
         public int QuantidadeReservada { get; set; }
-
-        public virtual List<Cliente> Clientes { get; set; }
-        public virtual Cliente Cliente { get; set; }
     }
 }

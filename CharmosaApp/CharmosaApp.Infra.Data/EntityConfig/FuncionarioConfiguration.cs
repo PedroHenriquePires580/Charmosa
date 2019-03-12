@@ -65,9 +65,6 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(f => f.DataNascimento)
                .IsRequired();
 
-            builder.Property(f => f.UsuarioFuncao)
-                .IsRequired();
-
             builder.Property(f => f.Email)
                 .IsRequired()
                 .HasColumnType("nvarchar(250)")

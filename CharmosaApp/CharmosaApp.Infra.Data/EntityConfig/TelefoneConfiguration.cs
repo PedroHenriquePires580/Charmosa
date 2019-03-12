@@ -15,11 +15,9 @@ namespace CharmosaApp.Infra.Data.EntityConfig
         {
             #region | Dados Especificos |
             builder.ToTable("TB_TELEFONE");
+            builder.HasKey(t => t.TelefoneID);
 
-            builder.Property(t => t.ClienteID)
-                .IsRequired();
-
-            builder.Property(t => t.TelefoneID)
+            builder.Property(t => t.UsuarioID)
                 .IsRequired();
 
             builder.Property(t => t.DDD)
@@ -31,8 +29,6 @@ namespace CharmosaApp.Infra.Data.EntityConfig
                 .IsRequired()
                 .HasColumnType("nvarchar(250)")
                 .HasMaxLength(250);
-
-            builder.HasOne(t => t.Cliente);
             #endregion
             #region | Dados Compartilhados |
 

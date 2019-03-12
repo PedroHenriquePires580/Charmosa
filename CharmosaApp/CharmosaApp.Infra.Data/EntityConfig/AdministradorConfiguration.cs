@@ -23,10 +23,6 @@ namespace CharmosaApp.Infra.Data.EntityConfig
                 .HasMaxLength(50)
                 .HasColumnType("nvarchar(50)");
 
-
-            builder.Property(a => a.UsuarioFuncao)
-                .IsRequired();
-
             builder.Property(a => a.Login)
                 .IsRequired()
                 .HasMaxLength(50)

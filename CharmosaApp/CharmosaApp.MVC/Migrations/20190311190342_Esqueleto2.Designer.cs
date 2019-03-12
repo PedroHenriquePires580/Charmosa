@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CharmosaApp.MVC.Migrations
 {
     [DbContext(typeof(CharmosaAppContext))]
-    [Migration("20190311174641_carrinho")]
-    partial class carrinho
+    [Migration("20190311190342_Esqueleto2")]
+    partial class Esqueleto2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,8 +54,6 @@ namespace CharmosaApp.MVC.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.Property<int>("UsuarioFuncao");
-
                     b.HasKey("AdmistradorID");
 
                     b.ToTable("TB_ADMINISTRADOR");
@@ -67,15 +65,18 @@ namespace CharmosaApp.MVC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ClienteID");
-
                     b.Property<DateTime?>("DataAlteracao");
 
                     b.Property<DateTime>("DataCadastro");
 
-                    b.Property<string>("LogInAlteracao");
+                    b.Property<string>("LogInAlteracao")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
-                    b.Property<string>("LogInInclusao");
+                    b.Property<string>("LogInInclusao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<int>("ProdutoID");
 
@@ -85,13 +86,15 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.Property<double>("SubTotal");
 
-                    b.HasKey("CarrinhoID");
+                    b.Property<int>("UsuarioID");
 
-                    b.HasIndex("ClienteID");
+                    b.HasKey("CarrinhoID");
 
                     b.HasIndex("ProdutoID");
 
-                    b.ToTable("Carrinho");
+                    b.HasIndex("UsuarioID");
+
+                    b.ToTable("TB_CARRINHO");
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Cliente", b =>
@@ -179,8 +182,6 @@ namespace CharmosaApp.MVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(2)")
                         .HasMaxLength(2);
-
-                    b.Property<int>("UsuarioFuncao");
 
                     b.HasKey("ClienteID");
 
@@ -275,8 +276,6 @@ namespace CharmosaApp.MVC.Migrations
                         .HasColumnType("nvarchar(2)")
                         .HasMaxLength(2);
 
-                    b.Property<int>("UsuarioFuncao");
-
                     b.HasKey("FuncionarioID");
 
                     b.ToTable("TB_FUNCIONARIO");
@@ -288,15 +287,18 @@ namespace CharmosaApp.MVC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ClienteID");
-
                     b.Property<DateTime?>("DataAlteracao");
 
                     b.Property<DateTime>("DataCadastro");
 
-                    b.Property<string>("LogInAlteracao");
+                    b.Property<string>("LogInAlteracao")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
-                    b.Property<string>("LogInInclusao");
+                    b.Property<string>("LogInInclusao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<int>("MercadoriaID");
 
@@ -308,13 +310,15 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.Property<int>("TipoProduto");
 
+                    b.Property<int?>("UsuarioBaseID");
+
                     b.Property<double>("ValorUnidade");
 
                     b.HasKey("ProdutoID");
 
-                    b.HasIndex("ClienteID");
+                    b.HasIndex("UsuarioBaseID");
 
-                    b.ToTable("Produto");
+                    b.ToTable("TB_PRODUTO");
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Roupa", b =>
@@ -362,7 +366,7 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.Property<int?>("AdministradorAdmistradorID");
 
-                    b.Property<int>("ClienteID");
+                    b.Property<int?>("ClienteID");
 
                     b.Property<string>("DDD")
                         .IsRequired()
@@ -392,6 +396,8 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.Property<int>("RegistroAtivo");
 
+                    b.Property<int>("UsuarioID");
+
                     b.HasKey("TelefoneID");
 
                     b.HasIndex("AdministradorAdmistradorID");
@@ -400,34 +406,66 @@ namespace CharmosaApp.MVC.Migrations
 
                     b.HasIndex("FuncionarioID");
 
+                    b.HasIndex("UsuarioID");
+
                     b.ToTable("TB_TELEFONE");
+                });
+
+            modelBuilder.Entity("CharmosaAPP.Domain.Entities.Usuario", b =>
+                {
+                    b.Property<int>("UsuarioBaseID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("DataAlteracao");
+
+                    b.Property<DateTime>("DataCadastro");
+
+                    b.Property<string>("LogInAlteracao")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("LogInInclusao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<int>("RegistroAtivo");
+
+                    b.Property<int>("UsuarioFuncao");
+
+                    b.Property<int>("UsuarioID");
+
+                    b.HasKey("UsuarioBaseID");
+
+                    b.ToTable("TB_USUARIO");
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Carrinho", b =>
                 {
-                    b.HasOne("CharmosaAPP.Domain.Entities.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("CharmosaAPP.Domain.Entities.Produto", "Produto")
                         .WithMany()
                         .HasForeignKey("ProdutoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CharmosaAPP.Domain.Entities.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Cliente", b =>
                 {
-                    b.HasOne("CharmosaAPP.Domain.Entities.Produto", "Produto")
+                    b.HasOne("CharmosaAPP.Domain.Entities.Produto")
                         .WithMany("Clientes")
                         .HasForeignKey("ProdutoID");
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Produto", b =>
                 {
-                    b.HasOne("CharmosaAPP.Domain.Entities.Cliente", "Cliente")
+                    b.HasOne("CharmosaAPP.Domain.Entities.Usuario")
                         .WithMany("Produtos")
-                        .HasForeignKey("ClienteID");
+                        .HasForeignKey("UsuarioBaseID");
                 });
 
             modelBuilder.Entity("CharmosaAPP.Domain.Entities.Telefone", b =>
@@ -436,14 +474,18 @@ namespace CharmosaApp.MVC.Migrations
                         .WithMany("Telefones")
                         .HasForeignKey("AdministradorAdmistradorID");
 
-                    b.HasOne("CharmosaAPP.Domain.Entities.Cliente", "Cliente")
+                    b.HasOne("CharmosaAPP.Domain.Entities.Cliente")
                         .WithMany("Telefones")
-                        .HasForeignKey("ClienteID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ClienteID");
 
                     b.HasOne("CharmosaAPP.Domain.Entities.Funcionario")
                         .WithMany("Telefones")
                         .HasForeignKey("FuncionarioID");
+
+                    b.HasOne("CharmosaAPP.Domain.Entities.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

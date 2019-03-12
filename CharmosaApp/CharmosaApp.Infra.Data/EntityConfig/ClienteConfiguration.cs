@@ -15,10 +15,6 @@ namespace CharmosaApp.Infra.Data.EntityConfig
         {
             #region | Dados Compartilhados |
 
-            builder.HasMany(c => c.Produtos)
-                .WithOne(c => c.Cliente);
-                
-
             builder.Property(c => c.Nome)
                 .IsRequired()
                 .HasColumnType("nvarchar(250)")
@@ -69,9 +65,6 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(c => c.DataNascimento)
                .IsRequired();
 
-            builder.Property(c => c.UsuarioFuncao)
-                .IsRequired();
-
             builder.Property(c => c.Email)
                 .IsRequired()
                 .HasColumnType("nvarchar(250)")
@@ -102,10 +95,9 @@ namespace CharmosaApp.Infra.Data.EntityConfig
             builder.Property(c => c.ClienteID)
                 .IsRequired();
 
-            builder.ToTable("TB_CLIENTE")
-                .HasMany(c => c.Telefones)
-                .WithOne(t => t.Cliente);
+            builder.ToTable("TB_CLIENTE");
 
+           
             #endregion
         }
     }

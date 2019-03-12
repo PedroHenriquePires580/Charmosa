@@ -10,7 +10,6 @@ namespace CharmosaAPP.Domain.Entities
     public class Cliente : UsuarioInfo
     {
         public int ClienteID { get; set; }
-        public virtual List<Produto> Produtos { get; set; }
-        public virtual Produto Produto { get; set; }
+
     }
 }

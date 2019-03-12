@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharmosaAPP.Domain.Entities.Base
 {
-    public abstract class UsuarioInfo : Usuario
+    public abstract class UsuarioInfo : UsuarioBase
     {
         public string Nome { get; set; }
         public string Sobrenome { get; set; }

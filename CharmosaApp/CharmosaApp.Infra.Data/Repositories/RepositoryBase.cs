@@ -45,7 +45,7 @@ namespace CharmosaApp.Infra.Data.Repositories
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            dbContext.Dispose();
         }
 
         public IEnumerable<TEntity> SearchFor(Expression<Func<TEntity, bool>> predicate)

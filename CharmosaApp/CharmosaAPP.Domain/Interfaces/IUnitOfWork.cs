@@ -10,10 +10,13 @@ namespace CharmosaAPP.Domain.Interfaces
     {
         IRepositoryBase<T> RepositoryBase { get; }
         IAdministradorRepository AdministradorRepository { get; }
+        ICarrinhoRepository CarrinhoRepository { get; }
+        IClienteRepository ClienteRepository { get; }
         IFuncionarioRepository FuncionarioRepository { get; }
+        IProdutoRepository ProdutoRepository { get; }
         IRoupaRepository RoupaRepository { get; }
         ITelefoneRepository TelefoneRepository { get; }
-        IClienteRepository ClienteRepository { get; }
+        IUsuarioRepository UsuarioRepository { get; }
         void Commit();
     }
 }

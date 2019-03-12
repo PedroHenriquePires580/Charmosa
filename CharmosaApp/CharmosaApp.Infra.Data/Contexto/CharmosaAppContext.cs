@@ -15,12 +15,13 @@ namespace CharmosaApp.Infra.Data.Contexto
         }
         #region | DbSets |
         DbSet<Administrador> Administrador { get; set; }
+        DbSet<Carrinho> Carrinho { get; set; }
+        DbSet<Cliente> Cliente { get; set; }
         DbSet<Funcionario> Funcionario { get; set; }
-        DbSet<Telefone> Telefone { get; set; }
         DbSet<Produto> Produto { get; set; }
         DbSet<Roupa> Roupa { get; set; }
-        DbSet<Cliente> Cliente { get; set; }
-        DbSet<Carrinho> Carrinho { get; set; }
+        DbSet<Telefone> Telefone { get; set; }
+        DbSet<Usuario> Usuario { get; set; }
 
         #endregion
 
@@ -28,6 +29,8 @@ namespace CharmosaApp.Infra.Data.Contexto
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            #region | Aplicando Configuration |
+
             /// <summary>
             /// Adicionando as referencias de configuração do EntityConfig
             /// </summary>
@@ -36,6 +39,11 @@ namespace CharmosaApp.Infra.Data.Contexto
             modelBuilder.ApplyConfiguration(new RoupaConfiguration());
             modelBuilder.ApplyConfiguration(new ClienteConfiguration());
             modelBuilder.ApplyConfiguration(new TelefoneConfiguration());
+            modelBuilder.ApplyConfiguration(new CarrinhoConfiguration());
+            modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+            
+            #endregion
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
