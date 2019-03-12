@@ -9,11 +9,10 @@ using CharmosaAPP.Domain.Interfaces;
 
 namespace CharmosaApp.Infra.Data.UnitOfWork
 {
-    public class UnitOfWork<T> : IUnitOfWork<T> where T : class
+    public class UnitOfWork : IUnitOfWork
     {
         #region | Variaveis |
         private CharmosaAppContext dbContext;
-        private IRepositoryBase<T> repositoryBase;
 
         private IAdministradorRepository administradorRepository;
         private ICarrinhoRepository carrinhoRepository;
@@ -93,15 +92,6 @@ namespace CharmosaApp.Infra.Data.UnitOfWork
             }
         }
 
-
-        public IRepositoryBase<T> RepositoryBase
-        {
-            get
-            {
-                return this.repositoryBase ?? new RepositoryBase<T>(this.dbContext);
-            }
-        }
-       
 
         public void Commit()
         {

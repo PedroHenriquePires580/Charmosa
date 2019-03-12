@@ -60,10 +60,6 @@
       <Project>{8bd0280f-064f-40e2-aa05-17073607e96d}</Project>
       <Name>CharmosaApp.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CharmosaApp.Infra.Data\CharmosaApp.Infra.Data.csproj">
-      <Project>{1575cdfd-03ec-4e1b-af72-67d411ac2700}</Project>
-      <Name>CharmosaApp.Infra.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

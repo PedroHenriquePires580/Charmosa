@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CharmosaAPP.Domain.Interfaces
 {
-    public interface IUnitOfWork<T> : IDisposable  where T: class
+    public interface IUnitOfWork : IDisposable 
     {
-        IRepositoryBase<T> RepositoryBase { get; }
         IAdministradorRepository AdministradorRepository { get; }
         ICarrinhoRepository CarrinhoRepository { get; }
         IClienteRepository ClienteRepository { get; }

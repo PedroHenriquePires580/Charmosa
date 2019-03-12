@@ -29,12 +29,15 @@ namespace CharmosaApp.MVC.Controllers
         [HttpGet]
         public ActionResult DetalhesFuncionario(int id)
         {
-            FuncionarioAppService appService
-                = new FuncionarioAppService(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>()));
-
-            Funcionario funcionario = appService._funcionarioUnitOfWork.FuncionarioRepository.GetByID(id);
-            var funcionarioView = Mapper.Map<FuncionarioViewModel>(funcionario);
-
+            FuncionarioViewModel funcionarioView;
+            using (UnitOfWork unitOfWork = new UnitOfWork(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>())))
+            {
+                using (var appService = new FuncionarioAppService(unitOfWork.FuncionarioRepository))
+                {
+                    Funcionario funcionario = appService.GetByID(id);
+                    funcionarioView = Mapper.Map<FuncionarioViewModel>(funcionario);
+                }
+            }
             return View(funcionarioView);
         }
 
@@ -52,12 +55,17 @@ namespace CharmosaApp.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                FuncionarioAppService appService =
-                    new FuncionarioAppService(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>()));
-                var funcionario = Mapper.Map<Funcionario>(funcionarioViewModel);
-                appService._funcionarioUnitOfWork.FuncionarioRepository.Add(funcionario);
-                appService._funcionarioUnitOfWork.Commit();
-                return RedirectToAction(nameof(DetalhesFuncionario), new { id = funcionario.FuncionarioID });
+                using (UnitOfWork unitOfWork = new UnitOfWork(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>())))
+                {
+                    using(FuncionarioAppService appService = new FuncionarioAppService(unitOfWork.FuncionarioRepository))
+                    {
+                        var funcionario = Mapper.Map<Funcionario>(funcionarioViewModel);
+                        appService.Add(funcionario);
+                        unitOfWork.Commit();
+                        return RedirectToAction(nameof(DetalhesFuncionario), new { id = funcionario.FuncionarioID });
+                    }
+                }
+                     
             }
 
             return View();
@@ -70,12 +78,20 @@ namespace CharmosaApp.MVC.Controllers
             try
             {
                 //// TODO: Add insert logic here
-                CharmosaAppContext dbContext = new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>());
-                AdministradorAppService appService =
-                    new AdministradorAppService(dbContext);
-                appService._administradorUnitOfWork.AdministradorRepository.Add(new Administrador());
+                var administrador = new Administrador();
 
-                return View();
+                using (UnitOfWork unitOfWork = new UnitOfWork(new CharmosaAppContext(new DbContextOptions<CharmosaAppContext>())))
+                {
+                    using(var appService = new AdministradorAppService(unitOfWork.AdministradorRepository))
+                    {
+                        appService.Add(administrador);
+                        unitOfWork.Commit();
+
+                        return View();
+                    }
+                }
+
+
             }
             catch(Exception ex)
             {

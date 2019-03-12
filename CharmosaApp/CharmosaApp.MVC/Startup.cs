@@ -47,7 +47,7 @@ namespace CharmosaApp.MVC
             services.AddScoped(typeof(IAppServiceBase<>), typeof(AppServiceBase<>));
             services.AddScoped<IAdministradorAppService, AdministradorAppService>();
             services.AddScoped<IFuncionarioAppService, FuncionarioAppService>();
-            services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             Mapper.Initialize(config => {
                 config.AddProfile<DomainToViewModelMappingProfile>();
